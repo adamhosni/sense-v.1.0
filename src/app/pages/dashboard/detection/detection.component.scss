@@ -1,0 +1,65 @@
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+  nb-card {
+    overflow: hidden;
+  }
+
+  nb-tabset {
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+
+    ::ng-deep ul {
+      // make same size as card header
+      padding-bottom: 1px;
+      ::ng-deep .tab-link {
+        padding: 1.25rem 2rem;
+      }
+    }
+  }
+
+  nb-tab {
+    padding: 0;
+  }
+
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  .centerSpans{
+    text-align: center;
+  }
+
+  ::ng-deep .sizeSearchBar{
+    width: 70% !important;
+    margin-left: 3%;
+    // grid-row: 1 / span 2!important;
+  }
+
+  ::ng-deep .modal-full {
+    // position: absolute !important;
+    // width: 100% !important;
+   // height: 100% !important; ;
+    top: 20% !important;
+    left: 10% !important;
+    margin: 0 0 0 -150px !important;
+
+    .cdk-visually-hidden {
+      width: 99% !important;
+      height: 99% !important;
+    }
+
+    nb-dialog-container {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+}

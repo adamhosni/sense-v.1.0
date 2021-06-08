@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package sense;
+
+import "google/protobuf/empty.proto";
+
+import "sense_core_mac_data.proto";
+
+service TargetListUpdateService {
+    rpc TargetCreateQuery (TargetUpdateRequest) returns (google.protobuf.Empty) {}
+    rpc TargetDeleteQuery (TargetUpdateRequest) returns (google.protobuf.Empty) {}
+    rpc TargetReadQuery (TargetListRequest) returns (TargetListResponse) {}
+}

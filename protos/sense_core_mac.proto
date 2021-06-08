@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package sense;
+
+import "sense_core_mac_data.proto";
+
+service TargetListQueryService {
+    rpc TargetFullReadQuery (TargetListRequest) returns (TargetListResponse) {}
+    rpc TargetDeltaReadQuery (TargetListRequest) returns (TargetListResponse) {}
+}
